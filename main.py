@@ -70,9 +70,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://c1-1-fsr-ai-agent.vercel.app"
-    ],
+    allow_origins=["*"],
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -90,11 +88,6 @@ def read_root():
 @app.get("/api/data/summary")
 def read_fsr_summary():
     summary = get_fsr_summary()
-
-    related_data = search_fsr_for_question(
-    request.message
-)
-
     return summary
 
 @app.get("/api/data")
