@@ -129,7 +129,7 @@ async function loadConversations() {
                 async function() {
                     try {
                         const response = await fetch(
-                            `http://127.0.0.1:8000/api/conversations/${conversation.id}`
+                            `https://c1-1fsr-ai-agent.onrender.com/api/conversations/${conversation.id}`
                         );
 
                         if (!response.ok) {
