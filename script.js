@@ -15,7 +15,7 @@ async function sendQuestion() {
     sendButton.disabled = true;
 
     try {
-        const response = await fetch("https://c1-1fsr-ai-agent.onrender.com", {
+        const response = await fetch("https://c1-1fsr-ai-agent.onrender.com/api/chat", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
