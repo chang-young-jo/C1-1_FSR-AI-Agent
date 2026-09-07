@@ -46,7 +46,7 @@ async function sendQuestion() {
 async function loadConversations() {
     try {
         const response = await fetch(
-            "fetch("https://c1-1fsr-ai-agent.onrender.com/api/conversations")"
+            "https://c1-1fsr-ai-agent.onrender.com/api/conversations"
         );
 
         if (!response.ok) {
