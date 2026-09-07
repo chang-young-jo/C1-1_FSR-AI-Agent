@@ -15,7 +15,7 @@ async function sendQuestion() {
     sendButton.disabled = true;
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/api/chat", {
+        const response = await fetch("https://c1-1fsr-ai-agent.onrender.com", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -46,7 +46,7 @@ async function sendQuestion() {
 async function loadConversations() {
     try {
         const response = await fetch(
-            "http://127.0.0.1:8000/api/conversations"
+            "fetch("https://c1-1fsr-ai-agent.onrender.com/api/conversations")"
         );
 
         if (!response.ok) {
@@ -102,7 +102,7 @@ async function loadConversations() {
 
                     try {
                         const response = await fetch(
-                            `http://127.0.0.1:8000/api/conversations/${conversation.id}`,
+                            `https://c1-1fsr-ai-agent.onrender.com/api/conversations/${conversation.id}`,
                             {
                                 method: "DELETE"
                             }
